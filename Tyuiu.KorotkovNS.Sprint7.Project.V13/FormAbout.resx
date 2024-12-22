@@ -117,13 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="openFileDialogMain_KNS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="saveFileDialogMain_KNS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>246, 17</value>
-  </metadata>
-  <metadata name="toolTipMain_KNS.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>470, 17</value>
-  </metadata>
+  <data name="textBoxInfo_KNS.Text" xml:space="preserve">
+    <value>Разработчик: Коротков Н.С.
+группа ИСТНб-24-1
+
+Программа разработана в рамках изучения языка С#
+
+Тюменский индустриальный университет (с) 2024
+Высшая школа цифровых технологий (с) 2024
+
+Внутреннее имя: Tyuiu.KorotkovNS.Sprint7.Project.V13
+
+
+
+</value>
+  </data>
 </root>

@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxPanelManagement_KNS = new GroupBox();
-            groupBox1 = new GroupBox();
-            textBox1 = new TextBox();
-            button2 = new Button();
+            groupBoxInfo_KNS = new GroupBox();
+            buttonManage_KNS = new Button();
+            buttonInformation_KNS = new Button();
             groupBoxPopulation_KNS = new GroupBox();
             textBoxPopulation_KNS = new TextBox();
             buttonBuildGrafic_KNS = new Button();
@@ -44,29 +45,34 @@
             buttonCalculateSquare_KNS = new Button();
             groupBoxSearch_KNS = new GroupBox();
             textBoxSearch_KNS = new TextBox();
-            button1 = new Button();
+            buttonSearch_KNS = new Button();
             groupBoxButton_KNS = new GroupBox();
             buttonSaveFile_KNS = new Button();
             buttonOpenFile_KNS = new Button();
+            buttonInfo_KNS = new Button();
             groupBoxGrafic_KNS = new GroupBox();
-            groupBoxOutPut_KNS = new GroupBox();
             chartPopulation_KNS = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            groupBoxOutPut_KNS = new GroupBox();
             dataGridViewOutPut_KNS = new DataGridView();
+            openFileDialogMain_KNS = new OpenFileDialog();
+            saveFileDialogMain_KNS = new SaveFileDialog();
+            toolTipMain_KNS = new ToolTip(components);
+            buttonManagement_KNS = new Button();
             groupBoxPanelManagement_KNS.SuspendLayout();
-            groupBox1.SuspendLayout();
+            groupBoxInfo_KNS.SuspendLayout();
             groupBoxPopulation_KNS.SuspendLayout();
             groupBoxSquare_KNS.SuspendLayout();
             groupBoxSearch_KNS.SuspendLayout();
             groupBoxButton_KNS.SuspendLayout();
             groupBoxGrafic_KNS.SuspendLayout();
-            groupBoxOutPut_KNS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)chartPopulation_KNS).BeginInit();
+            groupBoxOutPut_KNS.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewOutPut_KNS).BeginInit();
             SuspendLayout();
             // 
             // groupBoxPanelManagement_KNS
             // 
-            groupBoxPanelManagement_KNS.Controls.Add(groupBox1);
+            groupBoxPanelManagement_KNS.Controls.Add(groupBoxInfo_KNS);
             groupBoxPanelManagement_KNS.Controls.Add(groupBoxPopulation_KNS);
             groupBoxPanelManagement_KNS.Controls.Add(groupBoxSquare_KNS);
             groupBoxPanelManagement_KNS.Controls.Add(groupBoxSearch_KNS);
@@ -78,33 +84,36 @@
             groupBoxPanelManagement_KNS.TabStop = false;
             groupBoxPanelManagement_KNS.Text = "Панель управления";
             // 
-            // groupBox1
+            // groupBoxInfo_KNS
             // 
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(button2);
-            groupBox1.Location = new Point(6, 508);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(419, 117);
-            groupBox1.TabIndex = 1;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Пока хз";
+            groupBoxInfo_KNS.Controls.Add(buttonManage_KNS);
+            groupBoxInfo_KNS.Controls.Add(buttonInformation_KNS);
+            groupBoxInfo_KNS.Location = new Point(6, 508);
+            groupBoxInfo_KNS.Name = "groupBoxInfo_KNS";
+            groupBoxInfo_KNS.Size = new Size(419, 117);
+            groupBoxInfo_KNS.TabIndex = 1;
+            groupBoxInfo_KNS.TabStop = false;
+            groupBoxInfo_KNS.Text = "Информация";
             // 
-            // textBox1
+            // buttonManage_KNS
             // 
-            textBox1.Location = new Point(0, 74);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(419, 42);
-            textBox1.TabIndex = 1;
+            buttonManage_KNS.Location = new Point(224, 37);
+            buttonManage_KNS.Name = "buttonManage_KNS";
+            buttonManage_KNS.Size = new Size(142, 47);
+            buttonManage_KNS.TabIndex = 0;
+            buttonManage_KNS.Text = "?";
+            buttonManage_KNS.UseVisualStyleBackColor = true;
+            buttonManage_KNS.Click += buttonManage_KNS_Click;
             // 
-            // button2
+            // buttonInformation_KNS
             // 
-            button2.Location = new Point(277, 11);
-            button2.Name = "button2";
-            button2.Size = new Size(142, 47);
-            button2.TabIndex = 0;
-            button2.Text = "Рассчитать";
-            button2.UseVisualStyleBackColor = true;
+            buttonInformation_KNS.Location = new Point(57, 37);
+            buttonInformation_KNS.Name = "buttonInformation_KNS";
+            buttonInformation_KNS.Size = new Size(142, 47);
+            buttonInformation_KNS.TabIndex = 0;
+            buttonInformation_KNS.Text = "info";
+            buttonInformation_KNS.UseVisualStyleBackColor = true;
+            buttonInformation_KNS.Click += buttonInformation_KNS_Click;
             // 
             // groupBoxPopulation_KNS
             // 
@@ -134,6 +143,7 @@
             buttonBuildGrafic_KNS.TabIndex = 0;
             buttonBuildGrafic_KNS.Text = "На графике";
             buttonBuildGrafic_KNS.UseVisualStyleBackColor = true;
+            buttonBuildGrafic_KNS.Click += buttonBuildGrafic_KNS_Click;
             // 
             // buttonCalculatePopulation_KNS
             // 
@@ -143,6 +153,7 @@
             buttonCalculatePopulation_KNS.TabIndex = 0;
             buttonCalculatePopulation_KNS.Text = "Рассчитать";
             buttonCalculatePopulation_KNS.UseVisualStyleBackColor = true;
+            buttonCalculatePopulation_KNS.Click += buttonCalculatePopulation_KNS_Click;
             // 
             // groupBoxSquare_KNS
             // 
@@ -153,7 +164,7 @@
             groupBoxSquare_KNS.Size = new Size(419, 117);
             groupBoxSquare_KNS.TabIndex = 1;
             groupBoxSquare_KNS.TabStop = false;
-            groupBoxSquare_KNS.Text = "Площадь территории";
+            groupBoxSquare_KNS.Text = "Средняя площадь территории";
             // 
             // textBoxSquare_KNS
             // 
@@ -171,11 +182,12 @@
             buttonCalculateSquare_KNS.TabIndex = 0;
             buttonCalculateSquare_KNS.Text = "Рассчитать";
             buttonCalculateSquare_KNS.UseVisualStyleBackColor = true;
+            buttonCalculateSquare_KNS.Click += buttonCalculateSquare_KNS_Click;
             // 
             // groupBoxSearch_KNS
             // 
             groupBoxSearch_KNS.Controls.Add(textBoxSearch_KNS);
-            groupBoxSearch_KNS.Controls.Add(button1);
+            groupBoxSearch_KNS.Controls.Add(buttonSearch_KNS);
             groupBoxSearch_KNS.Location = new Point(6, 139);
             groupBoxSearch_KNS.Name = "groupBoxSearch_KNS";
             groupBoxSearch_KNS.Size = new Size(419, 117);
@@ -191,14 +203,15 @@
             textBoxSearch_KNS.Size = new Size(419, 42);
             textBoxSearch_KNS.TabIndex = 1;
             // 
-            // button1
+            // buttonSearch_KNS
             // 
-            button1.Location = new Point(277, 11);
-            button1.Name = "button1";
-            button1.Size = new Size(142, 47);
-            button1.TabIndex = 0;
-            button1.Text = "Поиск";
-            button1.UseVisualStyleBackColor = true;
+            buttonSearch_KNS.Location = new Point(277, 11);
+            buttonSearch_KNS.Name = "buttonSearch_KNS";
+            buttonSearch_KNS.Size = new Size(142, 47);
+            buttonSearch_KNS.TabIndex = 0;
+            buttonSearch_KNS.Text = "Поиск";
+            buttonSearch_KNS.UseVisualStyleBackColor = true;
+            buttonSearch_KNS.Click += buttonSearch_KNS_Click;
             // 
             // groupBoxButton_KNS
             // 
@@ -219,6 +232,7 @@
             buttonSaveFile_KNS.TabIndex = 0;
             buttonSaveFile_KNS.Text = "Сохранить";
             buttonSaveFile_KNS.UseVisualStyleBackColor = true;
+            buttonSaveFile_KNS.Click += buttonSaveFile_KNS_Click;
             // 
             // buttonOpenFile_KNS
             // 
@@ -228,6 +242,16 @@
             buttonOpenFile_KNS.TabIndex = 0;
             buttonOpenFile_KNS.Text = "Открыть";
             buttonOpenFile_KNS.UseVisualStyleBackColor = true;
+            buttonOpenFile_KNS.Click += buttonOpenFile_KNS_Click;
+            // 
+            // buttonInfo_KNS
+            // 
+            buttonInfo_KNS.Location = new Point(108, 26);
+            buttonInfo_KNS.Name = "buttonInfo_KNS";
+            buttonInfo_KNS.Size = new Size(95, 85);
+            buttonInfo_KNS.TabIndex = 0;
+            buttonInfo_KNS.Text = "info";
+            buttonInfo_KNS.UseVisualStyleBackColor = true;
             // 
             // groupBoxGrafic_KNS
             // 
@@ -239,6 +263,22 @@
             groupBoxGrafic_KNS.TabStop = false;
             groupBoxGrafic_KNS.Text = "График";
             // 
+            // chartPopulation_KNS
+            // 
+            chartArea1.Name = "ChartArea1";
+            chartPopulation_KNS.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend";
+            chartPopulation_KNS.Legends.Add(legend1);
+            chartPopulation_KNS.Location = new Point(0, 26);
+            chartPopulation_KNS.Name = "chartPopulation_KNS";
+            series1.ChartArea = "ChartArea1";
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend";
+            series1.Name = "Series";
+            chartPopulation_KNS.Series.Add(series1);
+            chartPopulation_KNS.Size = new Size(797, 282);
+            chartPopulation_KNS.TabIndex = 0;
+            // 
             // groupBoxOutPut_KNS
             // 
             groupBoxOutPut_KNS.Controls.Add(dataGridViewOutPut_KNS);
@@ -249,23 +289,6 @@
             groupBoxOutPut_KNS.TabStop = false;
             groupBoxOutPut_KNS.Text = "Вывод данных";
             // 
-            // chartPopulation_KNS
-            // 
-            chartArea1.Name = "ChartArea1";
-            chartPopulation_KNS.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            chartPopulation_KNS.Legends.Add(legend1);
-            chartPopulation_KNS.Location = new Point(0, 26);
-            chartPopulation_KNS.Name = "chartPopulation_KNS";
-            series1.ChartArea = "ChartArea1";
-            series1.IsVisibleInLegend = false;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chartPopulation_KNS.Series.Add(series1);
-            chartPopulation_KNS.Size = new Size(797, 282);
-            chartPopulation_KNS.TabIndex = 0;
-            // 
             // dataGridViewOutPut_KNS
             // 
             dataGridViewOutPut_KNS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -274,6 +297,19 @@
             dataGridViewOutPut_KNS.RowHeadersWidth = 51;
             dataGridViewOutPut_KNS.Size = new Size(797, 309);
             dataGridViewOutPut_KNS.TabIndex = 0;
+            // 
+            // openFileDialogMain_KNS
+            // 
+            openFileDialogMain_KNS.FileName = "openFileDialog1";
+            // 
+            // buttonManagement_KNS
+            // 
+            buttonManagement_KNS.Location = new Point(209, 26);
+            buttonManagement_KNS.Name = "buttonManagement_KNS";
+            buttonManagement_KNS.Size = new Size(95, 85);
+            buttonManagement_KNS.TabIndex = 0;
+            buttonManagement_KNS.Text = "?";
+            buttonManagement_KNS.UseVisualStyleBackColor = true;
             // 
             // FormMain
             // 
@@ -287,8 +323,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт 7 | Проект | Вариант 13 | Коротков Н.С.";
             groupBoxPanelManagement_KNS.ResumeLayout(false);
-            groupBox1.ResumeLayout(false);
-            groupBox1.PerformLayout();
+            groupBoxInfo_KNS.ResumeLayout(false);
             groupBoxPopulation_KNS.ResumeLayout(false);
             groupBoxPopulation_KNS.PerformLayout();
             groupBoxSquare_KNS.ResumeLayout(false);
@@ -297,8 +332,8 @@
             groupBoxSearch_KNS.PerformLayout();
             groupBoxButton_KNS.ResumeLayout(false);
             groupBoxGrafic_KNS.ResumeLayout(false);
-            groupBoxOutPut_KNS.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)chartPopulation_KNS).EndInit();
+            groupBoxOutPut_KNS.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridViewOutPut_KNS).EndInit();
             ResumeLayout(false);
         }
@@ -313,7 +348,7 @@
         private Button buttonOpenFile_KNS;
         private GroupBox groupBoxSearch_KNS;
         private TextBox textBoxSearch_KNS;
-        private Button button1;
+        private Button buttonSearch_KNS;
         private GroupBox groupBoxSquare_KNS;
         private TextBox textBoxSquare_KNS;
         private Button buttonCalculateSquare_KNS;
@@ -322,9 +357,16 @@
         private Button buttonCalculatePopulation_KNS;
         private GroupBox groupBox1;
         private TextBox textBox1;
-        private Button button2;
+        private Button buttonInfo_KNS;
         private Button buttonBuildGrafic_KNS;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartPopulation_KNS;
         private DataGridView dataGridViewOutPut_KNS;
+        private OpenFileDialog openFileDialogMain_KNS;
+        private SaveFileDialog saveFileDialogMain_KNS;
+        private ToolTip toolTipMain_KNS;
+        private Button buttonManagement_KNS;
+        private GroupBox groupBoxInfo_KNS;
+        private Button buttonManage_KNS;
+        private Button buttonInformation_KNS;
     }
 }
