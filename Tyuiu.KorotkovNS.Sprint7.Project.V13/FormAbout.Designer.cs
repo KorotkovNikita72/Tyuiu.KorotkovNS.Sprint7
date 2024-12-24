@@ -73,7 +73,7 @@
             Controls.Add(textBoxInfo_KNS);
             Controls.Add(pictureBoxAvatar_KNS);
             Name = "FormAbout";
-            Text = "FormAbout";
+            Text = "О программе";
             Load += FormAbout_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxAvatar_KNS).EndInit();
             ResumeLayout(false);

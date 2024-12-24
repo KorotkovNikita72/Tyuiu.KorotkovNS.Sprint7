@@ -28,33 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            textBox1 = new TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManage));
+            textBoxManage_KNS = new TextBox();
             SuspendLayout();
             // 
-            // textBox1
+            // textBoxManage_KNS
             // 
-            textBox1.Location = new Point(12, 12);
-            textBox1.Multiline = true;
-            textBox1.Name = "textBox1";
-            textBox1.ReadOnly = true;
-            textBox1.ScrollBars = ScrollBars.Vertical;
-            textBox1.Size = new Size(776, 426);
-            textBox1.TabIndex = 0;
+            textBoxManage_KNS.Location = new Point(12, 12);
+            textBoxManage_KNS.Multiline = true;
+            textBoxManage_KNS.Name = "textBoxManage_KNS";
+            textBoxManage_KNS.ReadOnly = true;
+            textBoxManage_KNS.ScrollBars = ScrollBars.Vertical;
+            textBoxManage_KNS.Size = new Size(776, 426);
+            textBoxManage_KNS.TabIndex = 0;
+            textBoxManage_KNS.Text = resources.GetString("textBoxManage_KNS.Text");
             // 
             // FormManage
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBox1);
+            Controls.Add(textBoxManage_KNS);
             Name = "FormManage";
-            Text = "FormManage";
+            Text = "Руководство пользователя";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBox1;
+        private TextBox textBoxManage_KNS;
     }
 }

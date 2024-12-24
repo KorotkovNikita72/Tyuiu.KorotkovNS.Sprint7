@@ -32,6 +32,7 @@
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxPanelManagement_KNS = new GroupBox();
             groupBoxInfo_KNS = new GroupBox();
             buttonManage_KNS = new Button();
@@ -125,7 +126,7 @@
             groupBoxPopulation_KNS.Size = new Size(419, 117);
             groupBoxPopulation_KNS.TabIndex = 1;
             groupBoxPopulation_KNS.TabStop = false;
-            groupBoxPopulation_KNS.Text = "Население";
+            groupBoxPopulation_KNS.Text = "Население (Общее количество/min/max)";
             // 
             // textBoxPopulation_KNS
             // 
@@ -137,7 +138,7 @@
             // 
             // buttonBuildGrafic_KNS
             // 
-            buttonBuildGrafic_KNS.Location = new Point(277, 11);
+            buttonBuildGrafic_KNS.Location = new Point(277, 21);
             buttonBuildGrafic_KNS.Name = "buttonBuildGrafic_KNS";
             buttonBuildGrafic_KNS.Size = new Size(142, 47);
             buttonBuildGrafic_KNS.TabIndex = 0;
@@ -147,7 +148,7 @@
             // 
             // buttonCalculatePopulation_KNS
             // 
-            buttonCalculatePopulation_KNS.Location = new Point(129, 11);
+            buttonCalculatePopulation_KNS.Location = new Point(129, 21);
             buttonCalculatePopulation_KNS.Name = "buttonCalculatePopulation_KNS";
             buttonCalculatePopulation_KNS.Size = new Size(142, 47);
             buttonCalculatePopulation_KNS.TabIndex = 0;
@@ -164,7 +165,7 @@
             groupBoxSquare_KNS.Size = new Size(419, 117);
             groupBoxSquare_KNS.TabIndex = 1;
             groupBoxSquare_KNS.TabStop = false;
-            groupBoxSquare_KNS.Text = "Средняя площадь территории";
+            groupBoxSquare_KNS.Text = "Средняя площадь всех территорий";
             // 
             // textBoxSquare_KNS
             // 
@@ -193,7 +194,7 @@
             groupBoxSearch_KNS.Size = new Size(419, 117);
             groupBoxSearch_KNS.TabIndex = 1;
             groupBoxSearch_KNS.TabStop = false;
-            groupBoxSearch_KNS.Text = "Поиск страны";
+            groupBoxSearch_KNS.Text = "Поиск страны в таблице";
             // 
             // textBoxSearch_KNS
             // 
@@ -267,6 +268,7 @@
             // 
             chartArea1.Name = "ChartArea1";
             chartPopulation_KNS.ChartAreas.Add(chartArea1);
+            legend1.Enabled = false;
             legend1.Name = "Legend";
             chartPopulation_KNS.Legends.Add(legend1);
             chartPopulation_KNS.Location = new Point(0, 26);
@@ -275,7 +277,12 @@
             series1.IsVisibleInLegend = false;
             series1.Legend = "Legend";
             series1.Name = "Series";
+            series2.ChartArea = "ChartArea1";
+            series2.IsVisibleInLegend = false;
+            series2.Legend = "Legend";
+            series2.Name = "Series2";
             chartPopulation_KNS.Series.Add(series1);
+            chartPopulation_KNS.Series.Add(series2);
             chartPopulation_KNS.Size = new Size(797, 282);
             chartPopulation_KNS.TabIndex = 0;
             // 
@@ -291,12 +298,15 @@
             // 
             // dataGridViewOutPut_KNS
             // 
+            dataGridViewOutPut_KNS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridViewOutPut_KNS.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewOutPut_KNS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewOutPut_KNS.Location = new Point(0, 26);
             dataGridViewOutPut_KNS.Name = "dataGridViewOutPut_KNS";
             dataGridViewOutPut_KNS.RowHeadersWidth = 51;
             dataGridViewOutPut_KNS.Size = new Size(797, 309);
             dataGridViewOutPut_KNS.TabIndex = 0;
+            
             // 
             // openFileDialogMain_KNS
             // 
