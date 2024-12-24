@@ -26,14 +26,14 @@ namespace Tyuiu.KorotkovNS.Sprint7.Project.V13
                         string[] headers = headerLine.Split(';'); // Предполагаем, что разделитель - точка с запятой  
                         foreach (string header in headers)
                         {
-                            dataTable.Columns.Add(header);
+                            dataTable.Columns.Add(header); //добавление столбцов
                         }
 
-                        while (!reader.EndOfStream)
+                        while (!reader.EndOfStream) //цикл выполняется пока не достигнет конец файла
                         {
-                            string line = reader.ReadLine();
-                            string[] fields = line.Split(';');
-                            dataTable.Rows.Add(fields);
+                            string line = reader.ReadLine();   //считывание строки из файла
+                            string[] fields = line.Split(';'); //разбиение с помощью раздилителя
+                            dataTable.Rows.Add(fields); //добавляет новые поля как новую строку
                         }
                     }
                 }
@@ -142,6 +142,8 @@ namespace Tyuiu.KorotkovNS.Sprint7.Project.V13
             int c = 0;
             for (int i = 0; i < dataGridViewOutPut_KNS.Rows.Count; i++)
             {
+                // Получение значения из третьей ячейки (индекс 2) текущей строки  
+                // Преобразование значения в целое число и добавление его к переменной c
                 c += Convert.ToInt32(dataGridViewOutPut_KNS.Rows[i].Cells[2].Value);
             }
 
@@ -237,6 +239,10 @@ namespace Tyuiu.KorotkovNS.Sprint7.Project.V13
 
         }
 
-
+        private void buttonNewYear_KNS_Click(object sender, EventArgs e)
+        {
+            FormNewYear formNY = new FormNewYear();
+            formNY.ShowDialog();
+        }
     }
 }

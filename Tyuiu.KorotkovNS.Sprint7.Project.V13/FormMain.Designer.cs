@@ -35,6 +35,7 @@
             System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             groupBoxPanelManagement_KNS = new GroupBox();
             groupBoxInfo_KNS = new GroupBox();
+            buttonNewYear_KNS = new Button();
             buttonManage_KNS = new Button();
             buttonInformation_KNS = new Button();
             groupBoxPopulation_KNS = new GroupBox();
@@ -78,15 +79,17 @@
             groupBoxPanelManagement_KNS.Controls.Add(groupBoxSquare_KNS);
             groupBoxPanelManagement_KNS.Controls.Add(groupBoxSearch_KNS);
             groupBoxPanelManagement_KNS.Controls.Add(groupBoxButton_KNS);
-            groupBoxPanelManagement_KNS.Location = new Point(12, 12);
+            groupBoxPanelManagement_KNS.Dock = DockStyle.Left;
+            groupBoxPanelManagement_KNS.Location = new Point(0, 0);
             groupBoxPanelManagement_KNS.Name = "groupBoxPanelManagement_KNS";
-            groupBoxPanelManagement_KNS.Size = new Size(431, 649);
+            groupBoxPanelManagement_KNS.Size = new Size(431, 673);
             groupBoxPanelManagement_KNS.TabIndex = 0;
             groupBoxPanelManagement_KNS.TabStop = false;
             groupBoxPanelManagement_KNS.Text = "Панель управления";
             // 
             // groupBoxInfo_KNS
             // 
+            groupBoxInfo_KNS.Controls.Add(buttonNewYear_KNS);
             groupBoxInfo_KNS.Controls.Add(buttonManage_KNS);
             groupBoxInfo_KNS.Controls.Add(buttonInformation_KNS);
             groupBoxInfo_KNS.Location = new Point(6, 508);
@@ -96,23 +99,39 @@
             groupBoxInfo_KNS.TabStop = false;
             groupBoxInfo_KNS.Text = "Информация";
             // 
+            // buttonNewYear_KNS
+            // 
+            buttonNewYear_KNS.Cursor = Cursors.Hand;
+            buttonNewYear_KNS.Image = Properties.Resources.drink;
+            buttonNewYear_KNS.Location = new Point(366, 68);
+            buttonNewYear_KNS.Name = "buttonNewYear_KNS";
+            buttonNewYear_KNS.Size = new Size(47, 43);
+            buttonNewYear_KNS.TabIndex = 1;
+            toolTipMain_KNS.SetToolTip(buttonNewYear_KNS, "Подсказка\r\nНажми меня");
+            buttonNewYear_KNS.UseVisualStyleBackColor = true;
+            buttonNewYear_KNS.Click += buttonNewYear_KNS_Click;
+            // 
             // buttonManage_KNS
             // 
+            buttonManage_KNS.Cursor = Cursors.Hand;
+            buttonManage_KNS.Image = Properties.Resources.book_edit;
             buttonManage_KNS.Location = new Point(224, 37);
             buttonManage_KNS.Name = "buttonManage_KNS";
             buttonManage_KNS.Size = new Size(142, 47);
             buttonManage_KNS.TabIndex = 0;
-            buttonManage_KNS.Text = "?";
+            toolTipMain_KNS.SetToolTip(buttonManage_KNS, "Подсказка\r\nРуководство пользователя");
             buttonManage_KNS.UseVisualStyleBackColor = true;
             buttonManage_KNS.Click += buttonManage_KNS_Click;
             // 
             // buttonInformation_KNS
             // 
+            buttonInformation_KNS.Cursor = Cursors.Hand;
+            buttonInformation_KNS.Image = Properties.Resources.information;
             buttonInformation_KNS.Location = new Point(57, 37);
             buttonInformation_KNS.Name = "buttonInformation_KNS";
             buttonInformation_KNS.Size = new Size(142, 47);
             buttonInformation_KNS.TabIndex = 0;
-            buttonInformation_KNS.Text = "info";
+            toolTipMain_KNS.SetToolTip(buttonInformation_KNS, "Подсказка\r\nО программе");
             buttonInformation_KNS.UseVisualStyleBackColor = true;
             buttonInformation_KNS.Click += buttonInformation_KNS_Click;
             // 
@@ -138,21 +157,25 @@
             // 
             // buttonBuildGrafic_KNS
             // 
+            buttonBuildGrafic_KNS.Cursor = Cursors.Hand;
+            buttonBuildGrafic_KNS.Image = Properties.Resources.chart_bar;
             buttonBuildGrafic_KNS.Location = new Point(277, 21);
             buttonBuildGrafic_KNS.Name = "buttonBuildGrafic_KNS";
             buttonBuildGrafic_KNS.Size = new Size(142, 47);
             buttonBuildGrafic_KNS.TabIndex = 0;
-            buttonBuildGrafic_KNS.Text = "На графике";
+            toolTipMain_KNS.SetToolTip(buttonBuildGrafic_KNS, "Подсказка\r\nВывести на график разницу между max и min");
             buttonBuildGrafic_KNS.UseVisualStyleBackColor = true;
             buttonBuildGrafic_KNS.Click += buttonBuildGrafic_KNS_Click;
             // 
             // buttonCalculatePopulation_KNS
             // 
+            buttonCalculatePopulation_KNS.Cursor = Cursors.Hand;
+            buttonCalculatePopulation_KNS.Image = Properties.Resources.calculator_edit;
             buttonCalculatePopulation_KNS.Location = new Point(129, 21);
             buttonCalculatePopulation_KNS.Name = "buttonCalculatePopulation_KNS";
             buttonCalculatePopulation_KNS.Size = new Size(142, 47);
             buttonCalculatePopulation_KNS.TabIndex = 0;
-            buttonCalculatePopulation_KNS.Text = "Рассчитать";
+            toolTipMain_KNS.SetToolTip(buttonCalculatePopulation_KNS, "Подсказка\r\nПосчитать население");
             buttonCalculatePopulation_KNS.UseVisualStyleBackColor = true;
             buttonCalculatePopulation_KNS.Click += buttonCalculatePopulation_KNS_Click;
             // 
@@ -177,11 +200,13 @@
             // 
             // buttonCalculateSquare_KNS
             // 
+            buttonCalculateSquare_KNS.Cursor = Cursors.Hand;
+            buttonCalculateSquare_KNS.Image = Properties.Resources.calculator;
             buttonCalculateSquare_KNS.Location = new Point(277, 11);
             buttonCalculateSquare_KNS.Name = "buttonCalculateSquare_KNS";
             buttonCalculateSquare_KNS.Size = new Size(142, 47);
             buttonCalculateSquare_KNS.TabIndex = 0;
-            buttonCalculateSquare_KNS.Text = "Рассчитать";
+            toolTipMain_KNS.SetToolTip(buttonCalculateSquare_KNS, "Подсказка\r\nПосчитать среднее значение");
             buttonCalculateSquare_KNS.UseVisualStyleBackColor = true;
             buttonCalculateSquare_KNS.Click += buttonCalculateSquare_KNS_Click;
             // 
@@ -206,11 +231,13 @@
             // 
             // buttonSearch_KNS
             // 
+            buttonSearch_KNS.Cursor = Cursors.Hand;
+            buttonSearch_KNS.Image = Properties.Resources.magnifier;
             buttonSearch_KNS.Location = new Point(277, 11);
             buttonSearch_KNS.Name = "buttonSearch_KNS";
             buttonSearch_KNS.Size = new Size(142, 47);
             buttonSearch_KNS.TabIndex = 0;
-            buttonSearch_KNS.Text = "Поиск";
+            toolTipMain_KNS.SetToolTip(buttonSearch_KNS, "Подсказка\r\nПоиск в таблице");
             buttonSearch_KNS.UseVisualStyleBackColor = true;
             buttonSearch_KNS.Click += buttonSearch_KNS_Click;
             // 
@@ -227,21 +254,25 @@
             // 
             // buttonSaveFile_KNS
             // 
+            buttonSaveFile_KNS.Cursor = Cursors.Hand;
+            buttonSaveFile_KNS.Image = Properties.Resources.page_go;
             buttonSaveFile_KNS.Location = new Point(253, 26);
             buttonSaveFile_KNS.Name = "buttonSaveFile_KNS";
             buttonSaveFile_KNS.Size = new Size(160, 65);
             buttonSaveFile_KNS.TabIndex = 0;
-            buttonSaveFile_KNS.Text = "Сохранить";
+            toolTipMain_KNS.SetToolTip(buttonSaveFile_KNS, "Подсказка\r\nСохранить файл");
             buttonSaveFile_KNS.UseVisualStyleBackColor = true;
             buttonSaveFile_KNS.Click += buttonSaveFile_KNS_Click;
             // 
             // buttonOpenFile_KNS
             // 
+            buttonOpenFile_KNS.Cursor = Cursors.Hand;
+            buttonOpenFile_KNS.Image = Properties.Resources.package_go;
             buttonOpenFile_KNS.Location = new Point(6, 26);
             buttonOpenFile_KNS.Name = "buttonOpenFile_KNS";
             buttonOpenFile_KNS.Size = new Size(160, 65);
             buttonOpenFile_KNS.TabIndex = 0;
-            buttonOpenFile_KNS.Text = "Открыть";
+            toolTipMain_KNS.SetToolTip(buttonOpenFile_KNS, "Подсказка\r\nОткрыть таблицу");
             buttonOpenFile_KNS.UseVisualStyleBackColor = true;
             buttonOpenFile_KNS.Click += buttonOpenFile_KNS_Click;
             // 
@@ -257,9 +288,10 @@
             // groupBoxGrafic_KNS
             // 
             groupBoxGrafic_KNS.Controls.Add(chartPopulation_KNS);
-            groupBoxGrafic_KNS.Location = new Point(453, 12);
+            groupBoxGrafic_KNS.Dock = DockStyle.Top;
+            groupBoxGrafic_KNS.Location = new Point(431, 0);
             groupBoxGrafic_KNS.Name = "groupBoxGrafic_KNS";
-            groupBoxGrafic_KNS.Size = new Size(797, 308);
+            groupBoxGrafic_KNS.Size = new Size(831, 308);
             groupBoxGrafic_KNS.TabIndex = 1;
             groupBoxGrafic_KNS.TabStop = false;
             groupBoxGrafic_KNS.Text = "График";
@@ -268,10 +300,11 @@
             // 
             chartArea1.Name = "ChartArea1";
             chartPopulation_KNS.ChartAreas.Add(chartArea1);
+            chartPopulation_KNS.Dock = DockStyle.Top;
             legend1.Enabled = false;
             legend1.Name = "Legend";
             chartPopulation_KNS.Legends.Add(legend1);
-            chartPopulation_KNS.Location = new Point(0, 26);
+            chartPopulation_KNS.Location = new Point(3, 23);
             chartPopulation_KNS.Name = "chartPopulation_KNS";
             series1.ChartArea = "ChartArea1";
             series1.IsVisibleInLegend = false;
@@ -283,15 +316,16 @@
             series2.Name = "Series2";
             chartPopulation_KNS.Series.Add(series1);
             chartPopulation_KNS.Series.Add(series2);
-            chartPopulation_KNS.Size = new Size(797, 282);
+            chartPopulation_KNS.Size = new Size(825, 282);
             chartPopulation_KNS.TabIndex = 0;
             // 
             // groupBoxOutPut_KNS
             // 
             groupBoxOutPut_KNS.Controls.Add(dataGridViewOutPut_KNS);
-            groupBoxOutPut_KNS.Location = new Point(453, 326);
+            groupBoxOutPut_KNS.Dock = DockStyle.Bottom;
+            groupBoxOutPut_KNS.Location = new Point(431, 338);
             groupBoxOutPut_KNS.Name = "groupBoxOutPut_KNS";
-            groupBoxOutPut_KNS.Size = new Size(797, 335);
+            groupBoxOutPut_KNS.Size = new Size(831, 335);
             groupBoxOutPut_KNS.TabIndex = 2;
             groupBoxOutPut_KNS.TabStop = false;
             groupBoxOutPut_KNS.Text = "Вывод данных";
@@ -301,12 +335,12 @@
             dataGridViewOutPut_KNS.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             dataGridViewOutPut_KNS.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewOutPut_KNS.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewOutPut_KNS.Location = new Point(0, 26);
+            dataGridViewOutPut_KNS.Dock = DockStyle.Bottom;
+            dataGridViewOutPut_KNS.Location = new Point(3, 23);
             dataGridViewOutPut_KNS.Name = "dataGridViewOutPut_KNS";
             dataGridViewOutPut_KNS.RowHeadersWidth = 51;
-            dataGridViewOutPut_KNS.Size = new Size(797, 309);
+            dataGridViewOutPut_KNS.Size = new Size(825, 309);
             dataGridViewOutPut_KNS.TabIndex = 0;
-            
             // 
             // openFileDialogMain_KNS
             // 
@@ -329,6 +363,7 @@
             Controls.Add(groupBoxOutPut_KNS);
             Controls.Add(groupBoxGrafic_KNS);
             Controls.Add(groupBoxPanelManagement_KNS);
+            MinimumSize = new Size(1280, 720);
             Name = "FormMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Спринт 7 | Проект | Вариант 13 | Коротков Н.С.";
@@ -378,5 +413,6 @@
         private GroupBox groupBoxInfo_KNS;
         private Button buttonManage_KNS;
         private Button buttonInformation_KNS;
+        private Button buttonNewYear_KNS;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace Tyuiu.KorotkovNS.Sprint7.Project.V13
 {
-    partial class FormManage
+    partial class FormNewYear
     {
         /// <summary>
         /// Required designer variable.
@@ -28,38 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormManage));
-            textBoxManage_KNS = new TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNewYear));
+            textBox1 = new TextBox();
+            textBox2 = new TextBox();
             SuspendLayout();
             // 
-            // textBoxManage_KNS
+            // textBox1
             // 
-            textBoxManage_KNS.Dock = DockStyle.Fill;
-            textBoxManage_KNS.Location = new Point(0, 0);
-            textBoxManage_KNS.Multiline = true;
-            textBoxManage_KNS.Name = "textBoxManage_KNS";
-            textBoxManage_KNS.ReadOnly = true;
-            textBoxManage_KNS.ScrollBars = ScrollBars.Vertical;
-            textBoxManage_KNS.Size = new Size(800, 450);
-            textBoxManage_KNS.TabIndex = 0;
-            textBoxManage_KNS.Text = resources.GetString("textBoxManage_KNS.Text");
+            textBox1.Location = new Point(250, 12);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(226, 27);
+            textBox1.TabIndex = 0;
+            textBox1.Text = "С наступающим Новым Годом!\r\n";
             // 
-            // FormManage
+            // textBox2
+            // 
+            textBox2.Location = new Point(12, 48);
+            textBox2.Multiline = true;
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(776, 390);
+            textBox2.TabIndex = 1;
+            textBox2.Text = resources.GetString("textBox2.Text");
+            // 
+            // FormNewYear
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(textBoxManage_KNS);
+            Controls.Add(textBox2);
+            Controls.Add(textBox1);
+            MaximizeBox = false;
+            MaximumSize = new Size(818, 497);
             MinimumSize = new Size(818, 497);
-            Name = "FormManage";
+            Name = "FormNewYear";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Руководство пользователя";
+            Text = "С Новым Годом!";
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox textBoxManage_KNS;
+        private TextBox textBox1;
+        private TextBox textBox2;
     }
 }

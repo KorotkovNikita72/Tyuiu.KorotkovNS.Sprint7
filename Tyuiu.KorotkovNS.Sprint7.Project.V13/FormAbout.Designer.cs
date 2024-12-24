@@ -72,7 +72,11 @@
             Controls.Add(buttonOk_KNS);
             Controls.Add(textBoxInfo_KNS);
             Controls.Add(pictureBoxAvatar_KNS);
+            MaximizeBox = false;
+            MaximumSize = new Size(725, 313);
+            MinimumSize = new Size(725, 313);
             Name = "FormAbout";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "О программе";
             Load += FormAbout_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBoxAvatar_KNS).EndInit();
